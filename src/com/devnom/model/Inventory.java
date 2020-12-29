@@ -2,6 +2,13 @@ package com.devnom.model;
 
 import java.util.ArrayList;
 
+/**
+ * This holds the inventory of each hat
+ *
+ * A list of these will compose our actual factory inventory
+ *
+ * @param <T>
+ */
 public class Inventory <T extends IHat> {
     private String hatCategory;
     private ArrayList<T> inventoryList;

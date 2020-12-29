@@ -14,7 +14,6 @@ public class CowboyHat extends Fixed {
         this.color = color;
         this.upcSuffix = startingCount;
         this.upcSymbol = UpcPrefix + upcSuffix;
-
         startingCount++;
     }
 
@@ -69,13 +68,13 @@ public class CowboyHat extends Fixed {
 
     @Override
     public String toString() {
-        return "CowboyHat{\n" +
-                "modelNumber='" + modelNumber + '\n' +
-                ", material='" + material + '\n' +
-                ", upcSymbol='" + upcSymbol + '\n' +
-                ", color='" + color + '\n' +
-                ", handStitched='" + handStitched + '\n' +
-                ", handWashable='" + handWashed + '\n' +
+        return "CowboyHat {\n" +
+                "\tmodelNumber='" + modelNumber + ",\n" +
+                "\tmaterial='" + material + ",\n" +
+                "\tupcSymbol='" + upcSymbol + ",\n"+
+                "\tcolor='" + color + ",\n" +
+                "\thandStitched='" + handStitched + ",\n" +
+                "\thandWashable='" + handWashed + ",\n" +
                 '}';
     }
 

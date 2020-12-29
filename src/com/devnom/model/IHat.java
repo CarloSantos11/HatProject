@@ -5,6 +5,7 @@ package com.devnom.model;
  *
  * Abstract Classes:
  * Concrete Classes:
+ * // detail what implents this interface
  */
 public interface IHat {
     String getModelNumber();
