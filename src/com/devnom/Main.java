@@ -1,8 +1,11 @@
 package com.devnom;
 
+
 import com.devnom.model.CowboyHat;
 import com.devnom.model.IHat;
 import com.devnom.model.Inventory;
+import com.devnom.controller.AppController;
+import com.devnom.view.AppUI;
 
 public class Main {
 
@@ -25,5 +28,8 @@ public class Main {
         cowboyHats.addToInventory((CowboyHat) hatToWorkWith2);
 
         System.out.println(cowboyHats);
+
+        AppController.startApp();
     }
+
 }
