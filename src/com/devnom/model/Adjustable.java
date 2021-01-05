@@ -10,4 +10,9 @@ public abstract class Adjustable implements IHat {
     boolean extraLogo = false;
     boolean specialEdition = false;
     double price;
+
+    @Override
+    public String toString() {
+        return this.getUpcSymbol();
+    }
 }

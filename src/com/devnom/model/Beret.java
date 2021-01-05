@@ -1,16 +1,16 @@
 package com.devnom.model;
 
-public class CowboyHat extends Fixed {
-    private final String modelNumber = "CB3319";
-    private final String UpcPrefix = "901352";
-    private static int startingCount = 9573;
-    private final String material = "Beaver";
+public class Beret extends Fixed  {
+    private final String modelNumber = "BR3109";
+    private final String UpcPrefix = "648252";
+    private static int startingCount = 8467;
+    private final String material = "Wool";
 
     private int upcSuffix;
     private String upcSymbol;
     private String color;
 
-    public CowboyHat(String color) {
+    public Beret(String color) {
         this.color = color;
         this.upcSuffix = startingCount;
         this.upcSymbol = UpcPrefix + upcSuffix;
@@ -69,7 +69,7 @@ public class CowboyHat extends Fixed {
     @Override
     public String toString() {
 
-       return getUpcSymbol() + " Cowboy Hat Color: " + this.getColor() + "\n";
+        return getUpcSymbol() + " Beret Hat Color: " + this.getColor() + "\n";
     }
 
     @Override

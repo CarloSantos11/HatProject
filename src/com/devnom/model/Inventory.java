@@ -10,34 +10,34 @@ import java.util.ArrayList;
  * @param <T>
  */
 public class Inventory <T extends IHat> {
-    private String hatCategory;
-    private ArrayList<T> inventoryList;
+    private String hatType;
+    private ArrayList<T> hatList;
 
-    public Inventory(String hatCategory) {
-        this.hatCategory = hatCategory;
-        inventoryList = new ArrayList<>();
+    public Inventory(String hatType) {
+        this.hatType = hatType;
+        hatList = new ArrayList<>();
     }
 
-        public void addToInventory(T hat) {
-        inventoryList.add(hat);
+    public void addToInventory(T hat) {
+        hatList.add(hat);
     }
 
-    public ArrayList<T> getInventoryList() {
-        return this.inventoryList;
+    public ArrayList<T> getHatList() {
+        return this.hatList;
     }
 
     public String getCategory() {
-        return this.hatCategory;
+        return this.hatType;
     }
 
     public int getCount() {
-        return this.inventoryList.size();
+        return this.hatList.size();
     }
 
     @Override
     public String toString() {
         System.out.println(getCategory() + ": Total Count(" + getCount() + ")");
-        for (T item : inventoryList) {
+        for (T item : hatList) {
             System.out.println(item);
         }
         System.out.println();
