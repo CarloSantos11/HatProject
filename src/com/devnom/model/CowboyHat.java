@@ -2,7 +2,7 @@ package com.devnom.model;
 
 public class CowboyHat extends Fixed {
     private final String modelNumber = "CB3319";
-    private final String UpcPrefix = "901352";
+    private final String upcPrefix = "901352";
     private static int startingCount = 9573;
     private final String material = "Beaver";
 
@@ -12,21 +12,12 @@ public class CowboyHat extends Fixed {
 
     public CowboyHat(String color) {
         this.color = color;
-        this.upcSuffix = startingCount;
-        this.upcSymbol = UpcPrefix + upcSuffix;
+        this.upcSuffix = getStartingCount();
+        this.upcSymbol = getModelNumber() + getUpcPrefix() + getUpcSuffix();
         startingCount++;
     }
 
-
-    public void setUpcSuffix(int upcSuffix) {
-        this.upcSuffix = upcSuffix;
-    }
-
-    public void setUpcSymbol(String upcSymbol) {
-        this.upcSymbol = upcSymbol;
-    }
-
-
+    @Override
     public void setPrice(double price) {
         this.price = price;
     }
@@ -44,16 +35,16 @@ public class CowboyHat extends Fixed {
 
     @Override
     public String getUpcPrefix() {
-        return this.UpcPrefix;
+        return this.upcPrefix;
     }
 
     @Override
-    public String getStartingCount() {
-        return this.getStartingCount();
+    public int getStartingCount() {
+        return this.startingCount;
     }
 
-    public String getUpcSuffix() {
-        return this.getStartingCount();
+    public int getUpcSuffix() {
+        return this.upcSuffix;
     }
 
     @Override
@@ -63,17 +54,11 @@ public class CowboyHat extends Fixed {
 
     @Override
     public String getMaterial() {
-        return null;
-    }
-
-    @Override
-    public String toString() {
-
-       return getUpcSymbol() + " Cowboy Hat Color: " + this.getColor() + "\n";
+        return this.material;
     }
 
     @Override
     public double getPrice() {
-        return 0;
+        return this.price;
     }
 }

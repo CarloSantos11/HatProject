@@ -18,8 +18,8 @@ public class AppUI {
     public static void addToInventoryMenu() {
         System.out.println(
                 "*************************************** \n" +
-                        "       Types of Hats\n" +
-                        "*************************************** \n" +
+                "       Types of Hats\n" +
+                "*************************************** \n" +
                         "\t1. Cowboy\n" +
                         "\t2. Beret\n" +
                         "\t3. Visor\n" +
@@ -34,8 +34,8 @@ public class AppUI {
     public static void pickColorMenu(){
         System.out.println(
                 "---------------------------------------------------------\n" +
-                        "                  Pick a color for your hat             \n " +
-                        "---------------------------------------------------------\n" +
+                "                  Pick a color for your hat             \n " +
+                "---------------------------------------------------------\n" +
                         " 1. Red \n" +
                         " 2. Green \n" +
                         " 3. Blue \n" +
@@ -48,13 +48,27 @@ public class AppUI {
         System.out.println(
                 "-------------------------------------------------------\n"+
                 "                 Select amount                         \n" +
-                        "-------------------------------------------------------\n"+
-                        "1. 50 \n" +
-                        "2. 75 \n" +
-                        "3. 100 \n" +
-                        "4. 125 \n" +
+                "-------------------------------------------------------\n"+
+                        "1. 5 \n" +
+                        "2. 10 \n" +
+                        "3. 25 \n" +
+                        "4. 100 \n" +
+                        "Q to exit ..."
+        );
+    }
+
+    public static void listInventroyMenu(){
+        System.out.println(
+                "-------------------------------------------------------\n"+
+                "           Select An Invetory Item To Print            \n" +
+                "-------------------------------------------------------\n"+
+                        "1. Cowboy Hats \n" +
+                        "2. Berets \n" +
+                        "3. Sun Hats \n" +
+                        "4. Print All \n" +
                         "Q to exit ..."
 
         );
     }
+
 }

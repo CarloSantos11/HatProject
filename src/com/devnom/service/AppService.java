@@ -6,10 +6,9 @@ public class AppService {
     public static void updateInventory(String hatType, String color, double amount) {
         for(int i = 0; i < amount; i++) {
             IHat hatInstance = createHatObject(hatType, color);
-
             HatInventory.hatCollection.get(hatType).addToInventory(hatInstance);
-
         }
+        HatInventory.print(hatType);
     }
 
     public static IHat createHatObject(String hatType, String color) {
@@ -19,7 +18,6 @@ public class AppService {
             case "Beret":
                 return new Beret(color);
         }
-
         return null;
     }
 }

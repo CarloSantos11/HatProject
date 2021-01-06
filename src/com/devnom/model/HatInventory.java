@@ -8,15 +8,23 @@ import java.util.Map;
  */
 public class HatInventory {
   public static Map<String, Inventory> hatCollection = new LinkedHashMap<String, Inventory>() {{
-     put("Cowboy", new Inventory<>("Cowboy"));
-     put("Beret", new Inventory("Beret"));
-     put("Sunhat", new Inventory("Sunhat"));
+   put("Cowboy", new Inventory<>("Cowboy"));
+   put("Beret", new Inventory("Beret"));
+   put("Sunhat", new Inventory("Sunhat"));
   }};
 
   public static void updateInventory(String inventoryType, Inventory hatInventory) {
-      hatCollection.put(inventoryType, hatInventory);
+    hatCollection.put(inventoryType, hatInventory);
   }
 
   public static void print() { hatCollection.forEach((key,value)-> System.out.println(value));}
 
+  public static void print(String hatType) {
+    Inventory filter = hatCollection.get(hatType);
+    filter.printInventoryDetails();
+  }
+
+  public static void fullPrint() {
+    hatCollection.forEach((key,value)-> value.printInventoryDetails());
+  }
 }

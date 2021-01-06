@@ -11,8 +11,8 @@ public interface IHat {
     String getModelNumber();
     String getUpcSymbol();
     String getUpcPrefix();
-    String getStartingCount();
-    String getUpcSuffix();
+    int getStartingCount();
+    int getUpcSuffix();
     String getColor();
     String getMaterial();
     double getPrice();

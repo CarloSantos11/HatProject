@@ -36,11 +36,15 @@ public class Inventory <T extends IHat> {
 
     @Override
     public String toString() {
-        System.out.println(getCategory() + ": Total Count(" + getCount() + ")");
+        return getCategory() + ": Total Count(" + getCount() + ")";
+    }
+
+    public void printInventoryDetails() {
+        System.out.println("***********************");
+        System.out.println(this);
         for (T item : hatList) {
             System.out.println(item);
         }
-        System.out.println();
-        return "";
+        System.out.println("***********************");
     }
 }
